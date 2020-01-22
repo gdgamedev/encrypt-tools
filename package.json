@@ -1,0 +1,19 @@
+{
+  "name": "encrypt",
+  "version": "1.0.0",
+  "description": "A native module to node js, with encrypt/decrypt functions to texts and files",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-gyp": "^3.7.0",
+    "node-addon-api": "^2.0.0"
+  },
+  "scripts": {
+    "build": "node-gyp rebuild",
+    "clean": "node-gyp clean",
+    "test": "node index.js",
+    "build_run": "node-gyp rebuild && node index.js"
+  },
+  "gypfile": true
+}
