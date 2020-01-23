@@ -192,7 +192,7 @@
     "tag": "latest",
     "scripts_prepend_node_path": "warn-only",
     "fetch_retry_factor": "10",
-    "npm_session": "dc30cb81f3150cd2",
+    "npm_session": "72cd22b8206496b2",
     "engine_strict": "",
     "https_proxy": "",
     "scope": "",
