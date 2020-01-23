@@ -1,7 +1,5 @@
 const Encrypt = require('bindings')('encrypt');
 
-console.log(Encrypt)
-
 /**
  * 
  * Encrypts a string with a key
@@ -21,7 +19,7 @@ function encrypt(input, key) {
 
 /**
  * 
- * Decrypts a encrypted with a key
+ * Decrypts a encrypted string (with the same key used to encrypt it)
  * 
  * @param {string} input
  * @param {string} key 
@@ -44,7 +42,7 @@ function decrypt(input, key) {
  * @param {string} key 
  * @param {string} outputPath 
  * @param {function} [callback = (progress) => {}]
- * @returns {promise}
+ * @returns {promise} Returns a promise for status track
  * 
  * @example
  * 	encryptFile('hello.txt', 'Secret', 'hello.txt', (progress) => {
@@ -62,13 +60,13 @@ function encryptFile(inputPath, key, outputPath, callback = (progress) => {}) {
 
 /**
  * 
- * Asynchronously decrypt a file with a key to a output path
+ * Asynchronously decrypt a encrypted file (with the same key used to encrypt it) to a output path
  * 
  * @param {string} inputPath 
  * @param {string} key 
  * @param {string} outputPath 
  * @param {function} [callback = (progress) => {}]
- * @returns {promise} 
+ * @returns {promise} Returns a promise for status track
  * 
  * @example
  * 	decryptFile('hello.txt', 'Secret', 'hello.txt', (progress) => {
@@ -86,13 +84,13 @@ function decryptFile(inputPath, key, outputPath, callback = (progress) => {}) {
 
 /**
  * 
- * Asynchronously write data to a file, and encrypt it
+ * Asynchronously write data to a file, and encrypt it with a key
  * 
  * @param {string} outputPath 
- * @param {string} key 
  * @param {string} data 
+ * @param {string} key 
  * @param {function} [callback = (progress) => {}]
- * @returns {promise}
+ * @returns {promise} Returns a promise for status track
  * 
  * @example
  *	write('hello.txt', 'Secret', 'Hello world!', (progress) => {
@@ -109,12 +107,12 @@ function writeFile(outputPath, data, key, callback = (progress) => {}) {
 
 /**
  * 
- * Asynchronously read data from a encrypted file
+ * Asynchronously read data from a encrypted file (with the same key used to encrypt it)
  * 
  * @param {string} inputPath 
  * @param {string} key 
  * @param {function} [callback = (progress) => {}]
- * @returns {promise}
+ * @returns {promise} Returns a promise for status track
  * 
  * @example
  *	read('hello.txt', 'Secret', (progress) => {
