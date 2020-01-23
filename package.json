@@ -1,5 +1,5 @@
 {
-  "name": "encryptjs",
+  "name": "encryptools",
   "version": "1.0.0",
   "description": "A native module to node js, with encrypt/decrypt functions to texts and files",
   "main": "index.js",
