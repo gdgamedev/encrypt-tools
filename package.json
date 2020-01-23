@@ -1,10 +1,13 @@
 {
-  "name": "encryptTools",
+  "name": "encrypt-tools",
   "version": "1.0.0",
   "description": "A native module to node js, with encrypt/decrypt functions to texts and files",
   "main": "index.js",
   "author": "",
   "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^2.0.0",
