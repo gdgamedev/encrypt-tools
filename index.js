@@ -55,7 +55,7 @@ function decrypt(input, key) {
  * 
  */
 function encryptFile(inputPath, key, outputPath, callback = (progress) => {}) {
-	return Encrypt.encryptFile(inputPath, key, outputPath, callback).then(()=>{}).catch((err)=>{})
+	return Encrypt.encryptFile(inputPath, key, outputPath, callback).then(()=>{}).catch(err=>err)
 }
 
 /**
@@ -79,7 +79,7 @@ function encryptFile(inputPath, key, outputPath, callback = (progress) => {}) {
  * 
  */
 function decryptFile(inputPath, key, outputPath, callback = (progress) => {}) {
-	return Encrypt.decryptFile(inputPath, key, outputPath, callback).then(()=>{}).catch((err)=>{})
+	return Encrypt.decryptFile(inputPath, key, outputPath, callback).then(()=>{}).catch(err=>err)
 }
 
 /**
@@ -102,7 +102,7 @@ function decryptFile(inputPath, key, outputPath, callback = (progress) => {}) {
  * 	})
  */
 function writeFile(outputPath, data, key, callback = (progress) => {}) {
-	return Encrypt.writeFile(outputPath, data, key, callback).then(()=>{}).catch((err)=>{})
+	return Encrypt.writeFile(outputPath, data, key, callback).then(()=>{}).catch(err=>err)
 }
 
 /**
@@ -124,7 +124,7 @@ function writeFile(outputPath, data, key, callback = (progress) => {}) {
  * 	})
  */
 function readFile(inputPath, key, callback = (progress) => {}) {
-	return Encrypt.readFile(inputPath, key, callback).then(()=>{}).catch((err)=>{})
+	return Encrypt.readFile(inputPath, key, callback).then(data=>data).catch(err=>err)
 }
 
 module.exports = {
