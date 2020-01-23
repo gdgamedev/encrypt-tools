@@ -8,7 +8,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "dependencies": {
+  "devDependencies": {
     "bindings": "^1.5.0",
     "node-addon-api": "^2.0.0",
     "node-gyp": "^3.7.0"
